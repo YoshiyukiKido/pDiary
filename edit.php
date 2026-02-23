@@ -213,42 +213,7 @@ if ($active) {
   <meta charset="utf-8">
   <title>日記 管理</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: system-ui, sans-serif; margin: 0; }
-    header { padding: 14px 16px; border-bottom: 1px solid #e5e5e5; display:flex; justify-content:space-between; align-items:center; }
-    .wrap { display: grid; grid-template-columns: 320px 1fr; min-height: calc(100vh - 56px); }
-    aside { border-right: 1px solid #e5e5e5; padding: 12px; overflow: auto; }
-    main { padding: 16px; overflow: auto; }
-    .entry { display:block; padding:10px; border-radius:8px; text-decoration:none; color:inherit; border:1px solid transparent; }
-    .entry:hover { background:#f6f6f6; }
-    .entry.active { border-color:#ccc; background:#fafafa; }
-    .muted { color:#666; font-size:0.9em; }
-    .card { border:1px solid #e5e5e5; border-radius:12px; padding:12px; margin-top:14px; }
-    textarea, input[type=text], input[type=date], input[type=time] { width: 100%; box-sizing: border-box; }
-    textarea { height: 220px; }
-    .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
-    .btn { padding: 10px 12px; border-radius: 10px; border: 1px solid #ccc; background: white; cursor: pointer; text-decoration:none; color:inherit; display:inline-block; }
-    .btn.primary { border-color:#999; font-weight:600; }
-    .btn.danger { border-color:#d33; color:#d33; }
-    .error { color:#b00020; margin: 10px 0; }
-
-    .pill { display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:999px; text-decoration:none; color:inherit; margin: 4px 6px 0 0; }
-    .pill.active { border-color:#999; background:#fafafa; font-weight:600; }
-    .pill small { color:#666; }
-
-    @media (max-width: 900px) {
-      .wrap { grid-template-columns: 1fr; }
-      aside { border-right:none; border-bottom:1px solid #e5e5e5; }
-    }
-
-    /* Markdown見栄え */
-    .card h1, .card h2, .card h3 { margin-top: 1.2em; }
-    .card p { line-height: 1.7; }
-    .card code { padding: 0.1em 0.3em; border: 1px solid #eee; border-radius: 6px; }
-    .card pre { padding: 12px; border: 1px solid #eee; border-radius: 10px; overflow: auto; }
-    .card blockquote { margin: 0; padding-left: 12px; border-left: 4px solid #ddd; color: #555; }
-    .card a { word-break: break-word; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
