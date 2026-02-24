@@ -53,13 +53,14 @@ composer require league/commonmark
 ```​
 mkdir -p data
 chmod 755 data
-```​
+```
 
 Apache が書き込み可能である必要があります。
 必要に応じて：
-```​
+```
 chown www-data:www-data data
-```​
+```
+​
 
 （環境に応じて変更してください）
 ---
@@ -67,7 +68,7 @@ chown www-data:www-data data
 ### ハッシュを生成
 ```​
 php -r 'echo password_hash("あなたのパスワード", PASSWORD_DEFAULT) . PHP_EOL;'
-```​
+```
 
 出力された文字列をコピー。
 
@@ -75,17 +76,15 @@ php -r 'echo password_hash("あなたのパスワード", PASSWORD_DEFAULT) . PH
 ### `db.php` を編集
 ```​
 const ADMIN_PASSWORD_HASH = '$2y$10$ここに貼り付ける';
-```​
+```
 
-⚠ 平文のパスワードは絶対に書かないでください。
+* 平文のパスワードは絶対に書かないでください。
 
 ---
 
 ## 5.ブラウザでアクセス
 
 閲覧ページ：http:/your-domain/pdiary/index.php
-
-
 管理ページ：http://your-domain/pdiary/edit.php
 
 
@@ -94,9 +93,7 @@ const ADMIN_PASSWORD_HASH = '$2y$10$ここに貼り付ける';
 # タグ（カテゴリ）仕様
 
 タイトルに `[tag]` を含めるとタグとして認識されます。
-
 例：散歩した[health][life]
-
 
 - タグは複数指定可能
 - タグでフィルタ可能
@@ -107,7 +104,6 @@ const ADMIN_PASSWORD_HASH = '$2y$10$ここに貼り付ける';
 # Markdown 仕様
 
 本文は Markdown で記述できます。
-
 
 ---
 
@@ -131,15 +127,14 @@ const ADMIN_PASSWORD_HASH = '$2y$10$ここに貼り付ける';
 
 ---
 
-# ⚠ 本番環境での推奨設定
-
+# 本番環境での推奨設定
 ## 1.SQLite を公開領域外へ移動（推奨）
 
 例：
 ```​
 /var/www/diary
 /var/lib/diary-data/diary.sqlite
-```​
+```
 
 `db.php` のパスを変更してください。
 
@@ -148,15 +143,13 @@ const ADMIN_PASSWORD_HASH = '$2y$10$ここに貼り付ける';
 ## 2.data ディレクトリを直接アクセス不可にする
 
 `data/` に `.htaccess` を置く：
-
 Require all denied
-
 
 ---
 
 ## 3. HTTPS を使用する
 
-本番公開時は HTTPS を必須にしてください。
+本番公開時はHTTPSを必須にしてください。
 
 ---
 
@@ -170,9 +163,7 @@ Require all denied
 
 # カスタマイズ
 
-共通CSSは：css/style.css
-
-を編集してください。
+共通CSSは：css/style.cssを編集してください。
 
 ---
 
